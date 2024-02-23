@@ -1,1 +1,1 @@
-# LangageC
+# Langage C
