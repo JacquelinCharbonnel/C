@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Projet C :: Cours langage C</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/extra.css">
+<link rel="stylesheet" href="../../../_/css/lastmodify.css">
+
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Cours langage C</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="C" data-version="2024">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Programmation en C</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Le langage C</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/base.html">Les bases</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/fonctions.html">Fonctions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/tableaux.html">Tableaux</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/pointeurs.html">Pointeurs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/strings.html">Chaînes de caractères</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/mainfunc.html">Fonction main</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/bibliotheque.html">Organisation du code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/fichiers.html">Fichiers de données</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/alloc.html">Allocation de mémoire</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/types.html">Complément sur les types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/preproc.html">Le préprocesseur</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/typeinterpret.html">Interprétation des types</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../C/ptrfunc.html">Pointeurs de fonctions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Programmation système</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/sig.html">Signaux Unix</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/proc.html">Processus</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sys/thread.html">Multi-threading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Programmation en C</span>
+    <span class="version">2024</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Programmation en C</span>
+      <ul class="versions">
+        <li class="version is-current">
+          <a href="../index.html">2024</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Programmation en C</a></li>
+    <li><a href="projet2024.html">Projet C</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C_github/starts/github/modules/evaluation/pages/projet2024.adoc">Edit this Page</a></div>
+</div>
+<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Projet C</h1>
+<div class="sect1">
+<h2 id="_sujet"><a class="anchor" href="#_sujet"></a>1. Sujet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Il s&#8217;agit de réaliser une application localisant rapidement
+une entrée de répertoire (fichier, répertoire, lien, etc) sur le disque.
+Par exemple, la recherche de <code>passwd</code> doit trouver <code>/etc/passwd</code>.
+De même, la recherche de <code>tmp</code> doit trouver <code>/tmp</code> et <code>/var/tmp</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_partie_i_à_rendre_le_3_novembre"><a class="anchor" href="#_partie_i_à_rendre_le_3_novembre"></a>1.1. Partie I : à rendre le 3 novembre</h3>
+<div class="paragraph">
+<p>Ecrire 2 fonctions : <code>load</code> qui charge en mémoire,
+dans une structure de données adaptée,  une arborescence de répertoires,
+et   <code>search</code> qui localise les occurrences d&#8217;une entrée donnée
+(dont le nom est fourni en argument) dans la structure de données précédente.</p>
+</div>
+<div class="paragraph">
+<p>Créer une bibliothèque contenant ces 2 fonctions
+(et éventuellement d’autres fonctions ayant un potentiel de réutilisation).</p>
+</div>
+<div class="paragraph">
+<p>Construire un programme <code>treetest</code> pour tester ces 2 fonctions.
+<code>treetest</code> est appelé avec un nom de fichier en argument (sur la ligne de commande),
+et écrit les emplacements correspondants.</p>
+</div>
+<div class="paragraph">
+<p><code>treetest</code> lit d&#8217;autres paramètres dans un fichier de configuration <code>tree.conf</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>tree.conf</code> définit différentes variables.
+A ce stade, on commence par une seule variable <code>rootdir</code>
+spécifiant la racine de l&#8217;arborescence à traiter.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Optionnellement, on pourra clarifier le fichier de configuration
+en autorisant les lignes blanches et les commentaires (sous une forme à choisir).
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">exemple de fichier tree.conf autorisant les commentaires</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs"># racine des répertoires à charger
+rootdir=/var</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Faire en sorte que le programme utilise ce fichier de configuration.</p>
+</div>
+<div class="paragraph">
+<p>Rédiger un <code>Makefile</code> pour la bibliothèque et un autre pour le programme.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_partie_ii_à_rendre_le_7_décembre"><a class="anchor" href="#_partie_ii_à_rendre_le_7_décembre"></a>1.2. Partie II : à rendre le 7 décembre</h3>
+<div class="paragraph">
+<p>Ecrire un programme <code>treeload</code>, réceptif au signal <code>SIGHUP</code>, qui
+charge une arborescence en mémoire
+et reste indéfiniment en attente de signaux.</p>
+</div>
+<div class="paragraph">
+<p>A l&#8217;arrivée de <code>SIGHUP</code>, <code>treeload</code> lit dans un fichier,
+dont le nom est spécifié dans le fichier de configuration <code>tree.conf</code>,
+le nom du fichier à rechercher,
+puis écrit les emplacements correspondants.</p>
+</div>
+<div class="paragraph">
+<p>Ecrire un second programme <code>treesearch</code> qui :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>récupère un nom de fichier sur la ligne de commande,</p>
+</li>
+<li>
+<p>le mémorise dans le fichier dont le nom est spécifié dans le fichier de configuration,</p>
+</li>
+<li>
+<p>envoie un signal <code>SIGHUP</code> à <code>treeload</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Cela nécessite de gérer 2 variables supplémentaires dans <code>tree.conf</code>, <code>datafile</code> et <code>pidfile</code>
+ :</p>
+</div>
+<div class="listingblock">
+<div class="title">fichier tree.conf</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs"># fichier pour passer les paramètres
+datafile=/tmp/treeload.data
+
+# fichier contenant le PID du treeload en cours d'exécution
+pidfile=/tmp/treeload.pid</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Réutiliser bien-entendu la bibliothèque faite en partie I.
+Faire en sorte que <code>treeload</code> et <code>treesearch</code> se compilent avec la commande <code>make</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_infos_pratiques"><a class="anchor" href="#_infos_pratiques"></a>2. Infos pratiques</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_remise_du_travail"><a class="anchor" href="#_remise_du_travail"></a>2.1. Remise du travail</h3>
+<div class="paragraph">
+<p>Remettre sur Moodle, avant 3 novembre pour la partie 1 et avant 7 décembre pour la partie 2,  une archive .tgz contenant les fichiers strictement nécessaires : code source, Makefile, fichiers de configuration de l’application et documentation (pas de binaire, ni tout autre fichier généré à partir de ces fichiers de base).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_correction"><a class="anchor" href="#_correction"></a>2.2. Correction</h3>
+<div class="paragraph">
+<p>Le correcteur décompactera l&#8217;archive avec <code>tar xzf</code>.
+Il essaiera ensuite de compiler la bibliothèque par une commande <code>make</code> dans le dossier de la bibliothèque, puis l&#8217;application principale par un <code>make</code> dans le dossier du programme, sans se poser d&#8217;autres questions.
+Il testera ensuite l&#8217;application en suivant le mode d&#8217;emploi fourni, sans se poser d&#8217;autres questions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_notation"><a class="anchor" href="#_notation"></a>2.3. Notation</h3>
+<div class="paragraph">
+<p>La note tiendra compte des éléments suivants :</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>stabilité de l&#8217;application (un programme qui plante sera très mal noté)</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Mieux vaut donc jouer la transparence, en annonçant qu&#8217;une fonctionnalité n&#8217;a pas été implémentée, plutôt que de fournir un programme qui plante.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>conformité des résultats obtenus par rapport au sujet
+(un programme qui ne sort pas ce qu&#8217;il faut sera mal noté)</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Mieux vaut donc jouer, là encore, la transparence,
+en annonçant qu&#8217;une fonctionnalité n&#8217;a pas été implémentée,
+plutôt que de sortir n&#8217;importe quoi.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>qualité du code : organisation, modularité, documentation, indentation
+(un programme propre, clair, agréable à comprendre sera favorisé)</p>
+</li>
+<li>
+<p>performances, fonctionnalités optionnelles et autres initiatives personnelles
+(des bonus)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Chaque reprise d&#8217;une partie I par un autre binome donnera lieu à bonus.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p class="center">
+  <span style="font-size: 0.9em;">
+  Jacquelin Charbonnel
+  &nbsp; &mdash; &nbsp; 
+  Support publié sous licence Creative Commons BY-NC-ND 
+  &nbsp; &mdash; &nbsp; 
+  2017-2024
+  </span>
+  </p>
+</footer>
+
+<script>
+var myDate = new Date(document.lastModified);
+myNewDate = new Intl.DateTimeFormat(
+            undefined,
+            {year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit"}
+        )
+        .format(myDate).replace(/\./g, '-');
+document.getElementById("lastmodify").innerHTML = myNewDate ;
+</script>
+
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
