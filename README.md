@@ -1,1 +1,1 @@
-# Langage C
+# Cours de langage C
