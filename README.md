@@ -1,2 +1,2 @@
-# [Langage C - SUpport de cours](https://jacquelincharbonnel.github.io/LangageC/C/2024)
+# [Langage C - Support de cours](https://jacquelincharbonnel.github.io/LangageC/C/2024)
 
