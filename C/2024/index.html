@@ -3,28 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Langage C</title>
+    <title>Programmer en C :: Langage C</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/LangageC/C/2024/index.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
-<link rel="stylesheet" href="../../_/css/extra.css">
-<link rel="stylesheet" href="../../_/css/lastmodify.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../_/css/layout.css">
+<link rel="stylesheet" href="../../_/css/content.css">
 
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../..">Langage C</a>
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/LangageC">Langage C</a>
+  <!-- suppression du burger du bandeau
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+-->      
     </div>
+<!-- suppression des boutons du bandeau
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
       </div>
     </div>
+-->
   </nav>
 </header>
 <div class="body">
@@ -33,6 +39,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">Programmation en C</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -109,9 +116,9 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <span class="title">Programmation en C</span>
+      <div class="title"><a href="index.html">Programmation en C</a></div>
       <ul class="versions">
-        <li class="version is-current">
+        <li class="version is-current is-latest">
           <a href="index.html">2024</a>
         </li>
       </ul>
@@ -126,28 +133,77 @@
 <button class="nav-toggle"></button>
   <a href="index.html" class="home-link is-current"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Programmation en C</a></li>
+    <li><a href="index.html">Programmer en <strong><code>C</code></strong></a></li>
+  </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/starts/github/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/./modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+-->
 </div>
-<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
   <div class="content">
-<article class="doc">
-<div class="paragraph">
-<p>Programmation en C</p>
-</div>
-</article>
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
+<article class="doc">
+<h1 class="page">Programmer en <strong><code>C</code></strong></h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Bien que créé pour la programmation système (la réécriture d&#8217;Unix au début des seventies), le <strong><code>C</code></strong> est un langage à usage
+général.
+On le trouve sur la plupart des architectures matérielles et la plupart des systèmes d&#8217;exploitation.
+De par son origine, c&#8217;est un langage qui possède des facilités naturelles
+d&#8217;interfaçage avec les primitives du système d&#8217;exploitation.
+Le <strong><code>C</code></strong> n&#8217;a pas divergé, au cours du temps, en divers
+dialectes. Donc les programmes <strong><code>C</code></strong> sont portables (s&#8217;ils sont bien codés).</p>
+</div>
+<div class="paragraph">
+<p>Le langage par lui-même est relativement dépouillé.
+On en fait rapidement le tour.
+C&#8217;est par sa bibliothèque standard qu&#8217;il s&#8217;interface au matériel, qu&#8217;il structure et manipule les données, qu&#8217;il communique avec son environnement, etc.
+Le <strong><code>C</code></strong> n&#8217;offre pas un haut niveau d&#8217;abstraction, il est sémantiquement près du matériel.
+C&#8217;est d&#8217;ailleurs pour cela que le code généré est efficace, inégalable en rapidité et
+compacité.
+Et pourtant, <strong><code>C</code></strong> est redoutable : ce n&#8217;est pas un langage pour débutant.
+Car certaines caractéristiques, qui le rendent
+populaires, peuvent aussi poser des difficultés au programmeur.</p>
+</div>
+<div class="paragraph">
+<p>Le typage faible du langage (on peut écrire des choses comme
+<code>c='A'-'a'+1</code>) limite la capacité du compilateur à détecter les erreurs.
+Le compilateur est permissif, le programmeur n&#8217;est pas très cadré, une grande liberté lui est laissée.
+Il travaille sans filet, la moindre de ses erreurs peut passer inaperçue à la compilation
+et s&#8217;avérer désastreuse à l&#8217;exécution
+<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+La concision du code peut nuire à sa lisibilité (par exemple, <code>a=*b++ + ++*++c</code> est une expression valide !).
+Ainsi, pour écrire un code clair et sans bug, le
+programmeur à intérêt à s&#8217;auto-discipliner (par exemple en s&#8217;imposant des limites et des conventions de style).</p>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. L&#8217;engouement actuel pour le langage Rust montre l&#8217;intérêt de la communauté des développeurs pour un cadrage plus strict.
+</div>
+</div>
+</article>
   </div>
 </main>
 </div>
 <footer class="footer">
   <p class="center">
   <span style="font-size: 0.9em;">
-  Jacquelin Charbonnel
-  &nbsp; &mdash; &nbsp; 
-  &copy; Creative Commons BY-NC-SA 4.0
+    <a href="https://jacquelincharbonnel.github.io/home/index.html">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy; Creative Commons BY-NC-SA 4.0
   </span>
   </p>
 </footer>
@@ -162,7 +218,7 @@ myNewDate = new Intl.DateTimeFormat(
 document.getElementById("lastmodify").innerHTML = myNewDate ;
 </script>
 
-<script src="../../_/js/site.js"></script>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
   </body>
 </html>

@@ -4,27 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Complément sur la fonction main :: Langage C</title>
+    <link rel="canonical" href="https://jacquelincharbonnel.github.io/LangageC/C/2024/C/mainfunc.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../_/css/site.css">
-<link rel="stylesheet" href="../../../_/css/extra.css">
-<link rel="stylesheet" href="../../../_/css/lastmodify.css">
+<!-- reference des feuilles de styles supplémentaires -->
+<link rel="stylesheet" href="../../../_/css/layout.css">
+<link rel="stylesheet" href="../../../_/css/content.css">
 
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="../../..">Langage C</a>
+      <a class="navbar-item" href="https://jacquelincharbonnel.github.io/LangageC">Langage C</a>
+  <!-- suppression du burger du bandeau
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
         <span></span>
       </button>
+-->      
     </div>
+<!-- suppression des boutons du bandeau
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
       </div>
     </div>
+-->
   </nav>
 </header>
 <div class="body">
@@ -33,6 +39,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="../index.html">Programmation en C</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -109,9 +116,9 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <span class="title">Programmation en C</span>
+      <div class="title"><a href="../index.html">Programmation en C</a></div>
       <ul class="versions">
-        <li class="version is-current">
+        <li class="version is-current is-latest">
           <a href="../index.html">2024</a>
         </li>
       </ul>
@@ -132,10 +139,17 @@
     <li><a href="mainfunc.html">Fonction main</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/starts/github/modules/C/pages/mainfunc.adoc">Edit this Page</a></div>
+<!-- supression de "edit this page"
+  <div class="edit-this-page"><a href="file:///home/jaclin/antora_components/C/./modules/C/pages/mainfunc.adoc">Edit this Page</a></div>
+-->
 </div>
-<div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- ajout de la date de modification -->
+  <div class="lastmodify"> modifié le <span id="lastmodify"/> </div>
+  <!-- fin ajout -->
   <div class="content">
+<aside class="toc sidebar" data-title="Plan" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
 <article class="doc">
 <h1 class="page">Complément sur la fonction <code>main</code></h1>
 <div class="sect1">
@@ -306,18 +320,16 @@ et la variable globale</p>
 </div>
 </div>
 </article>
-<aside class="toc sidebar" data-title="Contents" data-levels="2">
-  <div class="toc-menu"></div>
-</aside>
   </div>
 </main>
 </div>
 <footer class="footer">
   <p class="center">
   <span style="font-size: 0.9em;">
-  Jacquelin Charbonnel
-  &nbsp; &mdash; &nbsp; 
-  &copy; Creative Commons BY-NC-SA 4.0
+    <a href="https://jacquelincharbonnel.github.io/home/index.html">Jacquelin Charbonnel</a>
+    <!-- &nbsp; &mdash; &nbsp; -->
+    &nbsp; &nbsp;
+    &copy; Creative Commons BY-NC-SA 4.0
   </span>
   </p>
 </footer>
@@ -332,7 +344,7 @@ myNewDate = new Intl.DateTimeFormat(
 document.getElementById("lastmodify").innerHTML = myNewDate ;
 </script>
 
-<script src="../../../_/js/site.js"></script>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
   </body>
 </html>
